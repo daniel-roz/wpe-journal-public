@@ -1,0 +1,45 @@
+:root {
+  --ink: #1d2433;
+  --muted: #5d6475;
+  --line: #e3e5ea;
+  --paper: #ffffff;
+  --accent: var(--ink);
+  --accent-soft: #f1f2f5;
+
+  --display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --serif: 'Literata', Georgia, serif;
+  --wide: 72rem;
+}
+
+/* One colour pair per category; components pick it up via data-category. */
+[data-category='church'] { --accent: #5b328a; --accent-soft: #f1eaf8; }    /* purple: spirituality & faith */
+[data-category='classroom'] { --accent: #2455a4; --accent-soft: #e8effb; } /* blue: learning & knowledge */
+[data-category='community'] { --accent: #a84712; --accent-soft: #fbede2; } /* orange: warmth & connection */
+[data-category='court'] { --accent: #267044; --accent-soft: #e7f2e5; }     /* green */
+[data-category='culture'] { --accent: #9c2869; --accent-soft: #f7e8f0; }   /* magenta: arts & expression */
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.page {
+  display: block;
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
