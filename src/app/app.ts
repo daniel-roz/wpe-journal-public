@@ -28,8 +28,37 @@ import { CATEGORIES } from './api';
       </nav>
     </header>
     <main class="page"><router-outlet /></main>
+    <footer class="site-footer">
+      <p class="footer-name">Daniel Roz Arellano</p>
+      <p>WPE Journal 2026</p>
+    </footer>
   `,
   styles: `
+    /* Column layout so the footer sits at the bottom of short pages. */
+    :host {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .page {
+      flex: 1;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .site-footer {
+      padding: 1.5rem 1.25rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9375rem;
+      text-align: center;
+    }
+    .site-footer p {
+      margin: 0;
+    }
+    .footer-name {
+      font-weight: 600;
+      color: var(--ink);
+    }
     .site-header {
       position: sticky;
       top: 0;

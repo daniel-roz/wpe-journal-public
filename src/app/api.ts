@@ -1,12 +1,11 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { Observable, map, of, throwError } from 'rxjs';
-import { DUMMY_JOURNALS } from './dummy-data';
+import {HttpClient} from '@angular/common/http';
+import {inject, Injectable} from '@angular/core';
+import {map, Observable, of, throwError} from 'rxjs';
+import {DUMMY_JOURNALS} from './dummy-data';
 
-const API_URL = 'http://localhost:8080';
+const API_URL = "https://wpe-journal-api.onrender.com";
 
-// Serve DUMMY_JOURNALS instead of calling the API. Set to false once the API is up.
-const USE_DUMMY_DATA = true;
+const USE_DUMMY_DATA = false;
 
 export const CATEGORIES = ['church', 'classroom', 'community', 'court', 'culture'];
 

@@ -20,6 +20,7 @@ import { Carousel } from './carousel';
         <article>
           <h1 class="title">{{ j.title }}</h1>
           <dl class="details">
+            <div><dt>Category</dt><dd class="category">{{ j.category }}</dd></div>
             <div><dt>Organization</dt><dd>{{ j.organization }}</dd></div>
             <div>
               <dt>Date</dt>
@@ -79,6 +80,7 @@ import { Carousel } from './carousel';
     }
     .details dt { font-size: 0.875rem; color: var(--muted); }
     .details dd { margin: 0; font-weight: 600; }
+    .details .category { text-transform: capitalize; }
     .article {
       font-family: var(--serif);
       font-size: 1.25rem;
